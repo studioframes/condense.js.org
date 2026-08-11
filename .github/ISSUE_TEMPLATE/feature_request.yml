@@ -1,0 +1,26 @@
+name: Feature request
+about: Suggest an improvement or new experience for the site
+description: Use this template to propose changes to content, layout, or functionality.
+title: "[Feature] "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: Share your idea for the Condense website.
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: Describe the idea and why it would help.
+    validations:
+      required: true
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use case
+      description: Who would benefit from this change?
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Mention any alternatives or workarounds.

@@ -1,0 +1,21 @@
+{
+  "name": "condense.js.org",
+  "type": "module",
+  "private": true,
+  "description": "The Condense Website.",
+  "author": {
+    "name": "Studio Frames"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/studioframes/condense.js.org.git"
+  },
+  "scripts": {
+    "dev": "node server.js",
+    "test": "node tests/basic-check.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

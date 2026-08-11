@@ -1,0 +1,2 @@
+blogs/**/*.md linguist-language=Markdown
+blogs/**/*.md linguist-detectable=true

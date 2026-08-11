@@ -1,0 +1,36 @@
+name: Bug report
+about: Report a problem with the site or its content
+description: Use this template to report broken behavior, missing content, or visual issues.
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping improve the Condense website.
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the issue clearly.
+      placeholder: The documentation page is not loading correctly.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Share the steps that lead to the issue.
+      placeholder: 1. Open the docs page
+      
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should happen instead?
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional context
+      description: Add screenshots, links, or environment details.
