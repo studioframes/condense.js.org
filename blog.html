@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Condense Blog</title>
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' https://github-production-user-asset-6210df.s3.amazonaws.com https://github.com https://conbadges.pages.dev data:; connect-src 'self' https://fonts.googleapis.com https://raw.githubusercontent.com; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;" />
+  <link rel="icon" href="./images/condense-icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&family=Geist:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <script src="./js/script.js" defer></script>
+  <script src="./js/blog.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Site Header Navigation -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="header-start">
+        <a href="./index.html" class="logo-group">
+          <img src="./images/condense-icon.svg" alt="Condense logo" class="logo-img">
+        </a>
+
+        <nav class="nav-links">
+          <a href="./docs.html" class="nav-link">Docs</a>
+          <a href="./blog.html" class="nav-link active">Blog</a>
+          <a href="./changelog.html" class="nav-link">Changelog</a>
+        </nav>
+      </div>
+
+      <div class="header-actions">
+        <!-- Search Input with CtrlK Shortcut -->
+        <div class="search-box">
+          <input type="text" id="searchInput" class="search-input" placeholder="Search blogs..." />
+          <span class="search-shortcut">CtrlK</span>
+        </div>
+
+        <a href="https://github.com/studioframes/Condense" target="_blank" rel="noreferrer" class="icon-btn"
+          aria-label="Condense on GitHub">
+          <div class="icon-md">
+            <i class="bi bi-github"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main>
+
+    <!-- Blog List View (Default) -->
+    <div id="blogListView">
+      <!-- Page Title & RSS Hero Section -->
+      <section class="blog-hero-section">
+        <div class="container">
+          <h1 class="blog-page-title">
+            The latest Condense news
+          </h1>
+        </div>
+      </section>
+
+      <!-- Filter Category Bar -->
+      <section class="filter-bar">
+        <div class="container">
+          <div class="tag-list">
+            <button type="button" class="tag-btn active" data-category="All">All</button>
+            <button type="button" class="tag-btn" data-category="Security">Security</button>
+            <button type="button" class="tag-btn" data-category="AI">AI</button>
+            <button type="button" class="tag-btn" data-category="Performance">Performance</button>
+            <button type="button" class="tag-btn" data-category="Guide">Guide</button>
+            <button type="button" class="tag-btn" data-category="Release">Release</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Blog Grid (Populated dynamically from Markdown metadata by blog.js) -->
+      <section class="blogs-container">
+        <div class="container">
+          <div id="blogsGrid" class="blogs-grid">
+            <!-- Rendered via Vanilla JS -->
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Full Article Reader View (Shown when Read More is clicked) -->
+    <div id="blogPostView" class="hidden">
+      <section class="post-reader-section">
+        <div class="container">
+          <!-- Back to Blog Button -->
+          <div class="back-nav-row">
+            <a href="#" id="backToBlogBtn" class="back-to-blog-btn">
+              <i class="bi bi-arrow-left"></i> Back
+            </a>
+          </div>
+
+          <!-- Date and Category Badge (No Authors) -->
+          <div class="post-meta-row">
+            <span id="postDetailDate" class="post-date-text"></span>
+            <span id="postDetailCategory" class="blog-category-badge"></span>
+          </div>
+
+          <!-- Post Main Title -->
+          <h1 id="postDetailTitle" class="post-reader-title"></h1>
+
+          <!-- Divider Line -->
+          <hr class="post-reader-hr">
+
+          <!-- Reader Grid: Article Body + Sidebar TOC -->
+          <div class="article-reader-grid">
+            <div id="postDetailContent" class="article-reader-body">
+              <!-- Rendered article content -->
+            </div>
+
+            <aside class="article-reader-sidebar">
+              <div class="toc-sticky-box">
+                <h4 class="toc-heading">On this page</h4>
+                <ul id="postTocList" class="toc-list">
+                  <!-- Generated dynamically from article headings -->
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col-brand">
+          <div class="logo-group">
+            <img src="./images/condense.svg" alt="Condense logo" class="logo-img">
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Product</h3>
+          <ul class="footer-list">
+            <li><a href="./index.html#features" class="footer-link">Features</a></li>
+            <li><a href="./index.html#formats" class="footer-link">Formats</a></li>
+            <li><a href="./index.html#usage" class="footer-link">Usage</a></li>
+            <li><a href="./index.html#benchmarks" class="footer-link">Benchmarks</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Resources</h3>
+          <ul class="footer-list">
+            <li><a href="./docs.html" class="footer-link">Documentation</a></li>
+            <li><a href="https://www.npmjs.com/package/@studioframes/condense" target="_blank" rel="noreferrer"
+                class="footer-link">npm</a></li>
+            <li><a href="./changelog.html" class="footer-link">Changelog</a></li>
+            <li><a href="https://github.com/studioframes/Condense/blob/main/LICENSE" target="_blank" rel="noreferrer"
+                class="footer-link">License</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Community</h3>
+          <ul class="footer-list">
+            <li><a href="https://github.com/studioframes/Condense" target="_blank" rel="noreferrer"
+                class="footer-link">GitHub</a></li>
+            <li><a href="https://github.com/studioframes/Condense/issues" target="_blank" rel="noreferrer"
+                class="footer-link">Issues</a></li>
+            <li><a href="https://github.com/studioframes" target="_blank" rel="noreferrer" class="footer-link">Studio
+                Frames</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; <span id="current-year">2026</span> Studio Frames.
+        </p>
+        <a href="https://github.com/studioframes/Condense" target="_blank" rel="noreferrer" class="icon-btn"
+          aria-label="Condense on GitHub">
+          <div class="icon-md">
+            <i class="bi bi-github"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

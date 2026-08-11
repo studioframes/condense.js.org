@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Condense</title>
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' https://conbadges.pages.dev data:; connect-src 'self' https://fonts.googleapis.com https://raw.githubusercontent.com; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;" />
+  <link rel="icon" href="./images/condense-icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&family=Geist:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <script src="./js/script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="header-start">
+        <a href="#top" class="logo-group">
+          <img src="./images/condense-icon.svg" alt="Condense logo" class="logo-img">
+        </a>
+
+        <nav class="nav-links">
+          <a href="./docs.html" class="nav-link">Docs</a>
+          <a href="./blog.html" class="nav-link">Blog</a>
+          <a href="./changelog.html" class="nav-link">Changelog</a>
+        </nav>
+      </div>
+
+      <div class="header-actions">
+        <a href="https://github.com/studioframes/Condense" target="_blank" rel="noreferrer" class="icon-btn"
+          aria-label="Condense on GitHub">
+          <div class="icon-md">
+            <i class="bi bi-github"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="top" class="hero">
+      <!-- Mouse Reveal Effect Layer -->
+      <div class="hero-reveal" id="heroReveal" aria-hidden="true"></div>
+
+      <div class="container hero-content">
+
+        <h1 class="hero-title">
+          In-memory file optimization
+        </h1>
+
+        <p class="hero-description">
+          A high-performance, stateless optimization and minification engine.
+          Condense processes images, audio, video, code, and WebAssembly
+          <span class="highlight-text">entirely in-memory</span> using Buffers and Streams — never touching disk.
+        </p>
+
+        <div class="hero-cta">
+          <a href="./docs.html" class="btn-primary btn-lg">Get Started</a>
+          <a href="https://github.com/studioframes/Condense" target="_blank" rel="noreferrer"
+            class="btn-secondary btn-lg">
+            <i class="bi bi-github"></i>
+            Star on GitHub
+          </a>
+        </div>
+
+        <div class="cmd-box" data-copy-text="npm i @studioframes/condense">
+          <span class="prompt-symbol">▩ ~</span>
+          <span class="cmd-text">npm i @studioframes/condense</span>
+          <button class="copy-btn" type="button" aria-label="Copy command" title="Copy command">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Built for server-side and serverless workloads</h2>
+          <p class="section-desc">
+            Condense processes uploads and assets in-memory and returns optimized Buffers or Streams — ready to send
+            straight into your response.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <img src="./images/mat.svg">
+            <h3 class="feature-title">No temporary files</h3>
+            <p class="feature-desc">Processes files entirely in-memory with Buffers and Streams — no intermediate writes
+              to disk.</p>
+          </div>
+
+          <div class="feature-card">
+            <img src="./images/cat.svg">
+            <h3 class="feature-title">Stateless architecture</h3>
+            <p class="feature-desc">Optimizations run per-request with no persistent state, making horizontal scaling
+              effortless.</p>
+          </div>
+
+          <div class="feature-card">
+            <img src="./images/jat.svg">
+            <h3 class="feature-title">API-friendly</h3>
+            <p class="feature-desc">Designed to drop cleanly into HTTP APIs and microservices as Express middleware or
+              an SDK.</p>
+          </div>
+
+          <div class="feature-card">
+            <h3 class="feature-title">Serverless-ready</h3>
+            <p class="feature-desc">Works in ephemeral runtimes like Cloud Functions and Lambda where disk access is
+              limited.</p>
+          </div>
+
+          <div class="feature-card">
+            <h3 class="feature-title">High-throughput</h3>
+            <p class="feature-desc">Efficient pipelines built to handle high-volume media processing without breaking a
+              sweat.</p>
+          </div>
+
+          <div class="feature-card">
+            <h3 class="feature-title">Low-latency</h3>
+            <p class="feature-desc">Tuned to add minimal overhead to your request and response flows.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formats Section -->
+    <section id="formats" class="section-padding bg">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">One engine for every asset</h2>
+          <p class="section-desc">
+            Images, audio, video, markup, code, and WebAssembly — optimized through a single, consistent pipeline.
+          </p>
+        </div>
+
+        <div class="formats-grid">
+          <div class="format-card">
+            <div class="format-header">
+              <h3 class="feature-title">Media</h3>
+            </div>
+            <div class="format-tags">
+              <span class="format-tag image">.png</span>
+              <span class="format-tag image">.jpg</span>
+              <span class="format-tag image">.jpeg</span>
+              <span class="format-tag image">.webp</span>
+              <span class="format-tag image">.avif</span>
+              <span class="format-tag image">.gif</span>
+              <span class="format-tag image">.svg</span>
+              <span class="format-tag audio">.mp3</span>
+              <span class="format-tag audio">.wav</span>
+              <span class="format-tag gql">.mp4</span>
+            </div>
+          </div>
+
+          <div class="format-card">
+            <div class="format-header">
+              <h3 class="feature-title">Web & Code</h3>
+            </div>
+            <div class="format-tags">
+              <span class="format-tag html">.html</span>
+              <span class="format-tag css">.css</span>
+              <span class="format-tag js">.js</span>
+              <span class="format-tag ts">.ts</span>
+              <span class="format-tag react">.jsx</span>
+              <span class="format-tag react">.tsx</span>
+              <span class="format-tag js">.json</span>
+              <span class="format-tag html">.xml</span>
+              <span class="format-tag css">.yaml</span>
+              <span class="format-tag css">.yml</span>
+              <span class="format-tag gql">.graphql</span>
+              <span class="format-tag ts">.less</span>
+              <span class="format-tag gql">.scss</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Usage Code Examples Section -->
+    <section id="usage" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Run it any way you like</h2>
+          <p class="section-desc">
+            Use Condense as a standalone CLI, a server, mounted Express middleware, or programmatically with the helper
+            SDK.
+          </p>
+        </div>
+
+        <div class="code-card">
+          <!-- Hidden Radio Controls for CSS-Only Tabs -->
+          <input type="radio" id="tab-cli" name="usage-tab" class="tab-radio" checked>
+          <input type="radio" id="tab-server" name="usage-tab" class="tab-radio">
+          <input type="radio" id="tab-express" name="usage-tab" class="tab-radio">
+          <input type="radio" id="tab-sdk" name="usage-tab" class="tab-radio">
+
+          <!-- Tab Labels -->
+          <div class="tab-nav">
+            <label for="tab-cli" class="tab-label">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="m4 17 6-6-6-6"></path>
+                <path d="M12 19h8"></path>
+              </svg>
+              CLI
+            </label>
+            <label for="tab-server" class="tab-label">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect width="20" height="8" x="2" y="2" rx="2" ry="2"></rect>
+                <rect width="20" height="8" x="2" y="14" rx="2" ry="2"></rect>
+                <line x1="6" x2="6.01" y1="6" y2="6"></line>
+                <line x1="6" x2="6.01" y1="18" y2="18"></line>
+              </svg>
+              Server
+            </label>
+            <label for="tab-express" class="tab-label">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path
+                  d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z">
+                </path>
+                <path d="m22 17.65-8.58 3.9a2 2 0 0 1-1.66 0L3.18 17.65"></path>
+                <path d="m22 12.15-8.58 3.9a2 2 0 0 1-1.66 0L3.18 12.15"></path>
+              </svg>
+              Express
+            </label>
+            <label for="tab-sdk" class="tab-label">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+              Programmatic
+            </label>
+          </div>
+
+          <!-- CLI Panel -->
+          <div class="code-panel pane-cli">
+            <div class="code-header">
+              <span class="file-tag">terminal</span>
+            </div>
+            <pre class="code-block"><code><span class="code-comment"># Optimize a single image with extreme compression</span>
+npx <span class="code-command">@studioframes/condense</span> optimize photo.png -o out.webp <span class="code-option">--method extreme</span>
+
+<span class="code-comment"># Batch optimize a directory (balanced method)</span>
+npx <span class="code-command">@studioframes/condense</span> optimize ./src/ -o ./dist/ <span class="code-option">--method balanced</span></code></pre>
+          </div>
+
+          <!-- Server Panel -->
+          <div class="code-panel pane-server">
+            <div class="code-header">
+              <span class="file-tag">terminal</span>
+            </div>
+            <pre class="code-block"><code><span class="code-comment"># Start the standalone server</span>
+<span class="code-comment"># Defaults to port 3000 — set PORT to override</span>
+npx <span class="code-command">@studioframes/condense</span>
+
+<span class="code-comment"># POST files to http://localhost:3000/optimize</span>
+curl -X POST <span class="code-string">http://localhost:3000/optimize</span> \
+  -F <span class="code-string">"file=@./photo.png;type=image/png"</span> \
+  -F <span class="code-string">"method=balanced"</span> \
+  --output photo-condensed.png</code></pre>
+          </div>
+
+          <!-- Express Panel -->
+          <div class="code-panel pane-express">
+            <div class="code-header">
+              <span class="file-tag">server.js</span>
+            </div>
+            <pre class="code-block"><code><span class="code-keyword">const</span> express = <span class="code-function">require</span>(<span class="code-string">'express'</span>)
+<span class="code-keyword">const</span> { condenseApp } = <span class="code-function">require</span>(<span class="code-string">'@studioframes/condense'</span>)
+
+<span class="code-keyword">const</span> app = express()
+
+<span class="code-comment">// Mount all optimization routes under a path</span>
+app.<span class="code-function">use</span>(<span class="code-string">'/v1'</span>, condenseApp)
+
+app.<span class="code-function">listen</span>(<span class="code-number">8080</span>, () =&gt; {
+  <span class="code-function">console</span>.<span class="code-function">log</span>(<span class="code-string">'POST files to http://localhost:8080/v1/optimize'</span>)
+})</code></pre>
+          </div>
+
+          <!-- SDK Panel -->
+          <div class="code-panel pane-sdk">
+            <div class="code-header">
+              <span class="file-tag">optimize.js</span>
+            </div>
+            <pre
+              class="code-block"><code><span class="code-keyword">const</span> {
+  <span class="code-function">optimizeImage</span>,
+  <span class="code-function">optimizeText</span>,
+  <span class="code-function">optimizeMediaStream</span>,
+  <span class="code-function">optimizeEsbuild</span>,
+} = <span class="code-function">require</span>(<span class="code-string">'@studioframes/condense'</span>)
+
+<span class="code-comment">// Optimize an image Buffer (returns a Buffer)</span>
+<span class="code-keyword">const</span> { buffer, outMime } = <span class="code-keyword">await</span> <span class="code-function">optimizeImage</span>(
+  rawImageBuffer,
+  <span class="code-string">'image/png'</span>,
+  <span class="code-string">'extreme'</span>,
+)
+
+<span class="code-comment">// Optimize audio / video (returns a PassThrough Stream)</span>
+<span class="code-keyword">const</span> { stream } = <span class="code-function">optimizeMediaStream</span>(rawVideo, <span class="code-string">'video/mp4'</span>, <span class="code-string">'quality'</span>)</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methods Section -->
+    <section class="section-padding bg">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Three targets, one parameter</h2>
+          <p class="section-desc">
+            Dial in the exact trade-off between fidelity and file size with a single method flag.
+          </p>
+        </div>
+
+        <div class="methods-grid">
+          <div class="method-card streak-cyan">
+            <div class="method-top">
+              <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path
+                  d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+                </path>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+              <span class="tag-badge">Default</span>
+            </div>
+            <h3 class="method-name">Quality</h3>
+            <p class="method-desc">Visually lossless, safe compression that preserves maximum fidelity.</p>
+          </div>
+
+          <div class="method-card streak-magenta">
+            <div class="method-top">
+              <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path>
+                <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path>
+                <path d="M7 21h10"></path>
+                <path d="M12 3v18"></path>
+                <path d="M3 7h18"></path>
+              </svg>
+            </div>
+            <h3 class="method-name">Balanced</h3>
+            <p class="method-desc">The sweet spot between size and quality — mild lossy compression (65% JPEG quality,
+              crf 26 for video).</p>
+          </div>
+
+          <div class="method-card streak-amber">
+            <div class="method-top">
+              <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"></path>
+              </svg>
+            </div>
+            <h3 class="method-name">Extreme</h3>
+            <p class="method-desc">Maximum compression. Converts to modern formats, drops console logs, strips WASM
+              sections, and downscales video.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benchmarks Section -->
+    <section id="benchmarks" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Real reductions across the sample suite</h2>
+          <p class="section-desc">
+            Results from running the demo suite through the Condense pipeline with each optimization method.
+          </p>
+        </div>
+
+        <div class="table-card">
+          <div class="table-wrapper">
+            <table class="benchmark-table">
+              <thead>
+                <tr>
+                  <th>File</th>
+                  <th>Original</th>
+                  <th>Quality</th>
+                  <th>Balanced</th>
+                  <th>Extreme</th>
+                  <th class="text-right">Max reduction</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="cell-file">styles.scss</td>
+                  <td>1.3 KB</td>
+                  <td>0.3 KB</td>
+                  <td>0.3 KB</td>
+                  <td>0.3 KB</td>
+                  <td class="cell-reduction">-76.2%</td>
+                </tr>
+                <tr>
+                  <td class="cell-file">demo.png</td>
+                  <td>115.3 KB</td>
+                  <td>98.9 KB</td>
+                  <td>30.2 KB</td>
+                  <td>26.7 KB</td>
+                  <td class="cell-reduction">-76.8%</td>
+                </tr>
+                <tr>
+                  <td class="cell-file">app.js</td>
+                  <td>5.0 KB</td>
+                  <td>1.8 KB</td>
+                  <td>1.8 KB</td>
+                  <td>1.4 KB</td>
+                  <td class="cell-reduction">-72.5%</td>
+                </tr>
+                <tr>
+                  <td class="cell-file">component.tsx</td>
+                  <td>2.6 KB</td>
+                  <td>1.8 KB</td>
+                  <td>1.1 KB</td>
+                  <td>1.0 KB</td>
+                  <td class="cell-reduction">-61.0%</td>
+                </tr>
+                <tr>
+                  <td class="cell-file">service.ts</td>
+                  <td>2.2 KB</td>
+                  <td>1.5 KB</td>
+                  <td>1.0 KB</td>
+                  <td>0.9 KB</td>
+                  <td class="cell-reduction">-58.0%</td>
+                </tr>
+                <tr>
+                  <td class="cell-file">view.jsx</td>
+                  <td>2.3 KB</td>
+                  <td>1.8 KB</td>
+                  <td>1.2 KB</td>
+                  <td>1.1 KB</td>
+                  <td class="cell-reduction">-52.2%</td>
+                </tr>
+                <tr>
+                  <td class="cell-file">demo.svg</td>
+                  <td>217.0 KB</td>
+                  <td>119.5 KB</td>
+                  <td>119.3 KB</td>
+                  <td>119.3 KB</td>
+                  <td class="cell-reduction">-45.0%</td>
+                </tr>
+                <tr>
+                  <td class="cell-file">styles.css</td>
+                  <td>1.0 KB</td>
+                  <td>0.7 KB</td>
+                  <td>0.6 KB</td>
+                  <td>0.6 KB</td>
+                  <td class="cell-reduction">-36.4%</td>
+                </tr>
+                <tr>
+                  <td class="cell-file">index.html</td>
+                  <td>2.4 KB</td>
+                  <td>1.6 KB</td>
+                  <td>1.6 KB</td>
+                  <td>1.5 KB</td>
+                  <td class="cell-reduction">-35.9%</td>
+                </tr>
+                <tr>
+                  <td class="cell-file">config.yml</td>
+                  <td>0.9 KB</td>
+                  <td>0.7 KB</td>
+                  <td>0.7 KB</td>
+                  <td>0.6 KB</td>
+                  <td class="cell-reduction">-30.0%</td>
+                </tr>
+                <tr>
+                  <td class="cell-file">data.json</td>
+                  <td>0.5 KB</td>
+                  <td>0.4 KB</td>
+                  <td>0.4 KB</td>
+                  <td>0.4 KB</td>
+                  <td class="cell-reduction">-25.7%</td>
+                </tr>
+                <tr>
+                  <td class="cell-file">demo.mp4</td>
+                  <td>30.8 KB</td>
+                  <td>31.6 KB</td>
+                  <td>29.4 KB</td>
+                  <td>25.8 KB</td>
+                  <td class="cell-reduction">-16.4%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA & Footer Section -->
+    <section class="section-padding bg">
+      <div class="container">
+        <div class="cta-card">
+          <div class="cta-inner">
+            <h2 class="cta-title">Start optimizing in one command</h2>
+            <div class="cmd-box-v2" data-copy-text="npm i @studioframes/condense">
+              <span class="prompt-symbol">▩ ~</span>
+              <span class="cmd-text">npm i @studioframes/condense</span>
+              <button class="copy-btn" type="button" aria-label="Copy command" title="Copy command">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+              </button>
+            </div>
+
+            <div class="hero-cta">
+              <a href="https://condense.js.org/docs" target="_blank" rel="noreferrer" class="btn-primary btn-lg">Read
+                the Docs</a>
+              <a href="https://github.com/studioframes/Condense" target="_blank" rel="noreferrer"
+                class="btn-secondary btn-lg">
+                <i class="bi bi-github"></i>
+                View Source
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col-brand">
+          <div class="logo-group">
+            <img src="./images/condense.svg" alt="Condense logo" class="logo-img">
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Product</h3>
+          <ul class="footer-list">
+            <li><a href="#features" class="footer-link">Features</a></li>
+            <li><a href="#formats" class="footer-link">Formats</a></li>
+            <li><a href="#usage" class="footer-link">Usage</a></li>
+            <li><a href="#benchmarks" class="footer-link">Benchmarks</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Resources</h3>
+          <ul class="footer-list">
+            <li><a href="https://condense.js.org/docs" target="_blank" rel="noreferrer"
+                class="footer-link">Documentation</a></li>
+            <li><a href="https://www.npmjs.com/package/@studioframes/condense" target="_blank" rel="noreferrer"
+                class="footer-link">npm</a></li>
+            <li><a href="https://condense.js.org/changelog" target="_blank" rel="noreferrer"
+                class="footer-link">Changelog</a></li>
+            <li><a href="https://github.com/studioframes/Condense/blob/main/LICENSE" target="_blank" rel="noreferrer"
+                class="footer-link">License</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Community</h3>
+          <ul class="footer-list">
+            <li><a href="https://github.com/studioframes/Condense" target="_blank" rel="noreferrer"
+                class="footer-link">GitHub</a></li>
+            <li><a href="https://github.com/studioframes/Condense/issues" target="_blank" rel="noreferrer"
+                class="footer-link">Issues</a></li>
+            <li><a href="https://github.com/studioframes" target="_blank" rel="noreferrer" class="footer-link">Studio
+                Frames</a></li>
+            <li><a href="./blog.html" target="_blank" rel="noreferrer" class="footer-link">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; <span id="current-year">2026</span> Studio Frames.
+        </p>
+        <a href="https://github.com/studioframes/Condense" target="_blank" rel="noreferrer" class="icon-btn"
+          aria-label="Condense on GitHub">
+          <div class="icon-md">
+            <i class="bi bi-github"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
